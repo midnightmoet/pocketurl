@@ -26,7 +26,7 @@ export default function Redirect() {
           setLongURL(output.longURL);
           setTimeout(() => {
             router.push(output.longURL);
-          }, [1000]);
+          }, 1000);
         }
       }
     })();

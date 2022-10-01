@@ -1,3 +1,3 @@
-# Shorty
+# Pocketurl
 
-The url shortner
+The URL shortner

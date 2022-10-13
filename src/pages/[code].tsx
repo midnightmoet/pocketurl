@@ -10,7 +10,6 @@ export default function Redirect() {
   const router = useRouter();
   const { code } = router.query;
   const trpcCtx = trpc.useContext();
-  const increaseRedirectCount = trpc.useMutation("url.increaseRedirectCount");
   const [longURL, setLongURL] = useState("");
 
   useEffect(() => {

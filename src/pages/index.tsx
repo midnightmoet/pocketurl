@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage } from "next";
+import type { GetServerSideProps } from "next";
 import { AddInput, List, Wrapper } from "../components";
 import { getServerAuthSession } from "../server/common/get-server-auth-session";
 

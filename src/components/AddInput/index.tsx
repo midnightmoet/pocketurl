@@ -11,7 +11,12 @@ export function AddInput() {
   const { classes } = useStyles();
   const [longURL, setLongURL] = useState("");
   const [code, setCode] = useState("");
-  const shortenMutation = trpc.useMutation("url.shorten");
+  const trpcCtx = trpc.useContext();
+  const shortenMutation = trpc.useMutation("url.shorten", {
+    onSuccess() {
+      trpcCtx.invalidateQueries(["url.list"]);
+    },
+  });
 
   const clipboard = useClipboard({ timeout: 500 });
   const isValidUrl = (url: string) => {
